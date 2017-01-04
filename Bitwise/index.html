@@ -11,7 +11,9 @@
     <button onclick="changePage('Worksheet 1')">Worksheet 1</button>
     <button onclick="changePage('Worksheet 2')">Worksheet 2</button>
     <button onclick="changePage('Worksheet 3')">Worksheet 3</button>
-
+    <button onclick="changePage('Worksheet 4')">Worksheet 4</button>
+    <button onclick="changePage('Worksheet 5')">Worksheet 5</button>
+    <button onclick="changePage('Worksheet 6')">Worksheet 6</button>
     <h2 id="header">Explore</h2>
 
     <br>
@@ -19,15 +21,17 @@
     <table>
         <tr>
             <td><input id="a10" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('a10')"></td>
-            <td><select id="select" onchange="updateAns()"><option value="or">|</option><option value="and">&</option><option value="xor">^</option><option value="not">~</option><option value="ls"><<</option><option value="rs">>></option></select></td>
+            <td><span id="select2"></span><select id="select" onchange="updateAns()"><option value="or">|</option><option value="and">&</option><option value="xor">^</option><option value="not">~</option><option value="ls"><<</option><option value="rs">>></option></select></td>
             <td><input id="b10" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('b10')"></td>
-            <td id="i10">0</td>
+            <td> <input id="i10" value="0" style="text-align:right;" readonly oninput="update('i10')"/></td>
+            <td><button id="b" style="visibility:hidden;" onclick="check()">Check</button></td>
+            <td id="i"></td>
         </tr>
         <tr>
             <td><input id="a2" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('a2')"></td>
             <td></td>
             <td><input id="b2" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('b2')"></td>
-            <td id="i2">0</td>
+            <td> <input id="i2" value="0" style="text-align:right;" readonly oninput="update('i2')"/></td>
         </tr>
     </table>
 

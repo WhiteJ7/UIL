@@ -10,141 +10,144 @@ function changePage(page){
     document.getElementById("header").innerHTML = page;
     currentPage = page;
 
-    document.getElementById("b2").style.visibility = "visible";
-    document.getElementById("b8").style.visibility = "visible";
-    document.getElementById("b10").style.visibility = "visible";
-    document.getElementById("b16").style.visibility = "visible";
-    document.getElementById("i2").innerHTML = "";
-    document.getElementById("i8").innerHTML = "";
-    document.getElementById("i10").innerHTML = "";
-    document.getElementById("i16").innerHTML = "";
+    document.getElementById("b").style.visibility = "hidden";
+    document.getElementById("a2").value = "0";
+    document.getElementById("a10").value = "0";
+    document.getElementById("b2").value = "0";
+    document.getElementById("b10").value = "0";
+    document.getElementById("i2").value = "0";
+    document.getElementById("i10").value = "0";
 
-    document.getElementById("in2").readOnly= false;
-    document.getElementById("in8").readOnly = false;
-    document.getElementById("in10").readOnly = false;
-    document.getElementById("in16").readOnly = false;
+    document.getElementById("a2").readOnly= false;
+    document.getElementById("a10").readOnly = false;
+    document.getElementById("b2").readOnly = false;
+    document.getElementById("b10").readOnly = false;
+    document.getElementById("i2").readOnly = true;
+    document.getElementById("i10").readOnly = true;
+    document.getElementById("select").style.visibility = "visible";
+    document.getElementById("select2").innerHTML = "";
+    document.getElementById("a10").disabled = false;
+    document.getElementById("a2").disabled = false;
 
     switch (page) {
         case "Explore":
-            visible2 = false;
-            toggle("2");
-            visible8 = false;
-            toggle("8");
-            visible10 = false;
-            toggle("10");
-            visible16 = false;
-            toggle("16");
-            document.getElementById("in2").value = "0";
-            update("2");
+            
             break;
         case "Worksheet 1":
-            correct = 73;
-
-            document.getElementById("b2").innerHTML = "Check";
-            document.getElementById("in2").style.visibility = "visible";
-            document.getElementById("in2").value = "";
-
-            document.getElementById("b8").innerHTML = "Check";
-            document.getElementById("in8").style.visibility = "visible";
-            document.getElementById("in8").value = "";
-
-            document.getElementById("in10").readOnly = true;
-            document.getElementById("b10").style.visibility = "hidden";
-            document.getElementById("in10").style.visibility = "visible";
-            document.getElementById("in10").value = "73";
-
-            document.getElementById("b16").innerHTML = "Check";
-            document.getElementById("in16").style.visibility = "visible";
-            document.getElementById("in16").value = "";
+            correct = "70";
+            document.getElementById("b").style.visibility = "visible";
+            document.getElementById("a10").readOnly = true;
+            document.getElementById("b10").readOnly = true;
+            document.getElementById("i2").readOnly = false;
+            document.getElementById("i10").readOnly = false;
+            document.getElementById("select").style.visibility = "hidden";
+            document.getElementById("select2").innerHTML = "&";
+            document.getElementById("a10").value = "215";
+            document.getElementById("b10").value = "78";
+            document.getElementById("a2").value = "";
+            document.getElementById("b2").value = "";
+            document.getElementById("i2").value = "";
+            document.getElementById("i10").value = "";
             break;
-
         case "Worksheet 2":
-            correct = 179;
-
-            document.getElementById("in2").readOnly = true;
-            document.getElementById("b2").style.visibility = "hidden";
-            document.getElementById("in2").style.visibility = "visible";
-            document.getElementById("in2").value = "10110011";
-
-            document.getElementById("b8").innerHTML = "Check";
-            document.getElementById("in8").style.visibility = "visible";
-            document.getElementById("in8").value = "";
-
-            document.getElementById("b10").innerHTML = "Check";
-            document.getElementById("in10").style.visibility = "visible";
-            document.getElementById("in10").value = "";
-
-            document.getElementById("b16").innerHTML = "Check";
-            document.getElementById("in16").style.visibility = "visible";
-            document.getElementById("in16").value = "";
+            correct = "234";
+            document.getElementById("b").style.visibility = "visible";
+            document.getElementById("a10").readOnly = true;
+            document.getElementById("b10").readOnly = true;
+            document.getElementById("i2").readOnly = false;
+            document.getElementById("i10").readOnly = false;
+            document.getElementById("select").style.visibility = "hidden";
+            document.getElementById("select2").innerHTML = "|";
+            document.getElementById("a10").value = "194";
+            document.getElementById("b10").value = "170";
+            document.getElementById("a2").value = "";
+            document.getElementById("b2").value = "";
+            document.getElementById("i2").value = "";
+            document.getElementById("i10").value = "";
             break;
         case "Worksheet 3":
-            correct = 38;
-
-            
-            document.getElementById("b2").innerHTML = "Check";
-            document.getElementById("in2").style.visibility = "visible";
-            document.getElementById("in2").value = "";
-
-            document.getElementById("b8").innerHTML = "Check";
-            document.getElementById("in8").style.visibility = "visible";
-            document.getElementById("in8").value = "";
-
-            document.getElementById("b10").innerHTML = "Check";
-            document.getElementById("in10").style.visibility = "visible";
-            document.getElementById("in10").value = "";
-
-            document.getElementById("in16").readOnly = true;
-            document.getElementById("b16").style.visibility = "hidden";
-            document.getElementById("in16").style.visibility = "visible";
-            document.getElementById("in16").value = "26";
+            correct = "132";
+            document.getElementById("b").style.visibility = "visible";
+            document.getElementById("a10").readOnly = true;
+            document.getElementById("b10").readOnly = true;
+            document.getElementById("i2").readOnly = false;
+            document.getElementById("i10").readOnly = false;
+            document.getElementById("select").style.visibility = "hidden";
+            document.getElementById("select2").innerHTML = "^";
+            document.getElementById("a10").value = "87";
+            document.getElementById("b10").value = "211";
+            document.getElementById("a2").value = "";
+            document.getElementById("b2").value = "";
+            document.getElementById("i2").value = "";
+            document.getElementById("i10").value = "";
+            break;
+        case "Worksheet 4":
+            correct = "20";
+            document.getElementById("a10").disabled = true;
+            document.getElementById("a2").disabled = true;
+            document.getElementById("b").style.visibility = "visible";
+            document.getElementById("a10").readOnly = true;
+            document.getElementById("b10").readOnly = true;
+            document.getElementById("i2").readOnly = false;
+            document.getElementById("i10").readOnly = false;
+            document.getElementById("select").style.visibility = "hidden";
+            document.getElementById("select2").innerHTML = "&";
+            document.getElementById("a10").value = "";
+            document.getElementById("b10").value = "107";
+            document.getElementById("a2").value = "";
+            document.getElementById("b2").value = "";
+            document.getElementById("i2").value = "";
+            document.getElementById("i10").value = "";
+            break;
+        case "Worksheet 5":
+            correct = "52";
+            document.getElementById("b").style.visibility = "visible";
+            document.getElementById("a10").readOnly = true;
+            document.getElementById("b10").readOnly = true;
+            document.getElementById("i2").readOnly = false;
+            document.getElementById("i10").readOnly = false;
+            document.getElementById("select").style.visibility = "hidden";
+            document.getElementById("select2").innerHTML = "<<";
+            document.getElementById("a10").value = "13";
+            document.getElementById("b10").value = "2";
+            document.getElementById("a2").value = "";
+            document.getElementById("b2").value = "";
+            document.getElementById("i2").value = "";
+            document.getElementById("i10").value = "";
+            break;
+        case "Worksheet 6":
+            correct = "9";
+            document.getElementById("b").style.visibility = "visible";
+            document.getElementById("a10").readOnly = true;
+            document.getElementById("b10").readOnly = true;
+            document.getElementById("i2").readOnly = false;
+            document.getElementById("i10").readOnly = false;
+            document.getElementById("select").style.visibility = "hidden";
+            document.getElementById("select2").innerHTML = ">>";
+            document.getElementById("a10").value = "72";
+            document.getElementById("b10").value = "3";
+            document.getElementById("a2").value = "";
+            document.getElementById("b2").value = "";
+            document.getElementById("i2").value = "";
+            document.getElementById("i10").value = "";
             break;
     }
 }
 
-function toggle(section) {
-    if (currentPage == "Explore") {
-        var bool = false;
-        switch (section) {
-            case "2":
-                visible2 = !visible2;
-                bool = visible2;
-                break;
-        }
-        switch (section) {
-            case "8":
-                visible8 = !visible8;
-                bool = visible8;
-                break;
-        }
-        switch (section) {
-            case "10":
-                visible10 = !visible10;
-                bool = visible10;
-                break;
-        }
-        switch (section) {
-            case "16":
-                visible16 = !visible16;
-                bool = visible16;
-                break;
-        }
-        document.getElementById("in" + section).style.visibility = bool ? "visible" : "hidden";
-        document.getElementById("b" + section).innerHTML = bool ? "Hide" : "Show";
+function check() {
+    if (document.getElementById("i10").value == correct) {
+        document.getElementById("i").innerHTML = "Correct!";
     }
-    else if(currentPage.match(/Worksheet \d+/)){
-        var value = document.getElementById("in" + section).value;
-        if (value == "") value = "0";
-        value = parseInt(value, parseInt(section));
-        document.getElementById("i"+section).innerHTML = (value == correct) ? "Correct!" : "Incorrect. Correct answer: " + correct.toString(parseInt(section));
+    else {
+        document.getElementById("i").innerHTML = "Incorrect. Correct answer: "+correct;
     }
 }
 
 function update(section) {
-    if (section.match(/[ab]2/)) {
+    if (section.match(/[abi]2/)) {
         document.getElementById(section).value = new String(document.getElementById(section).value).replace(/[^01]/, "");
     }
-    else if (section.match(/[ab]10/)) {
+    else if (section.match(/[abi]10/)) {
         document.getElementById(section).value = new String(document.getElementById(section).value).replace(/[^0123456789]/, "");
     }
 
@@ -158,7 +161,7 @@ function update(section) {
         updateAns();
     }
     else if (currentPage.match(/Worksheet \d+/)) {
-        document.getElementById("i" + section).innerHTML = "";
+        //document.getElementById("i" + section).value = "";
     }
 }
 
@@ -198,6 +201,6 @@ function updateAns() {
                 value = a >> b;
                 break;
         }
-        document.getElementById("i10").innerHTML = value;
-        document.getElementById("i2").innerHTML = value.toString(2);
+        document.getElementById("i10").value = value;
+        document.getElementById("i2").value = value.toString(2);
 }
