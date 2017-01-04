@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Number Bases</title>
+    <script src="Script1.js"></script>
+</head>
+<body style="font-family:monospace;">
+    <button onclick="changePage('Explore')">Explore</button>
+    <button onclick="changePage('Worksheet 1')">Worksheet 1</button>
+    <button onclick="changePage('Worksheet 2')">Worksheet 2</button>
+    <button onclick="changePage('Worksheet 3')">Worksheet 3</button>
+
+    <h2 id="header">Explore</h2>
+
+    <br>
+
+    <table>
+        <tr>
+            <th><h3 style="float:left;margin:10px;text-align:right;width:120px;">Binary</h3></th>
+            <td><input id="in2" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('2')"></td>
+            <td><button id="b2" style="float:left;margin:10px;font-family:monospace;" onclick="toggle('2')">Hide</button></td>
+            <td id="i2"></td>
+        </tr>
+        <tr>
+            <th><h3 style="float:left;margin:10px;text-align:right;width:120px;">Octal</h3></th>
+            <td><input id="in8" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('8')"></td>
+            <td><button id="b8" style="float:left;margin:10px;font-family:monospace;" onclick="toggle('8')">Hide</button></td>
+            <td id="i8"></td>
+        </tr>
+        <tr>
+            <th><h3 style="float:left;margin:10px;text-align:right;width:120px;">Decimal</h3></th>
+            <td><input id="in10" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('10')"></td>
+            <td><button id="b10" style="float:left;margin:10px;font-family:monospace;" onclick="toggle('10')">Hide</button></td>
+            <td id="i10"></td>
+        </tr>
+        <tr>
+            <th><h3 style="float:left;margin:10px;text-align:right;width:120px;">Hexidecimal</h3></th>
+            <td><input id="in16" type="text" style="float:left;margin:10px;text-align:right;font-family:monospace;" value="0" oninput="update('16')"></td>
+            <td><button id="b16" style="float:left;margin:10px;font-family:monospace;" onclick="toggle('16')">Hide</button></td>
+            <td id="i16"></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
